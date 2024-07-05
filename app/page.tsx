@@ -1,113 +1,392 @@
-import Image from 'next/image';
+import React, {useRef} from 'react';
+import Image from "next/image";
+import Typed from 'typed.js';
 
 export default function Home() {
+     
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="min-h-screen flex-col items-center justify-between">
+      
+    <div className="menu" id="Menu">
+        <div className="logo" id="logo">
+            <a href="index.html">
+                <Image src="/logo.png" width={100} height={100} alt="logo" /> 
+            </a>
         </div>
-      </div>
+        <div className="nav" id="nav">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about__content">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div className="social" id="social">
+            <a title="facebook" href="#"><i className="fab fa-facebook-f"></i></a>          
+            <a title="linkedin" href="#"><i className="fab fa-linkedin-in"></i></a>
+            <a title="instagram" href="#"><i className="fab fa-instagram"></i></a>           
+        </div>
+        <div className="close__menu" id="close_menu">
+            <i className="fas fa-chevron-left"></i>
+        </div>
+    </div>
+  
+    <div className="content" id="content">
+      
+        <header className="header" id="Home">  
+            <div className="header__content" id="header__content">
+                <div className="header__title">
+                    <h1>Bhuvanesh</h1>
+                    <h2>Hello I'm <span className="typing"></span></h2>
+                </div>
+                <div className="Down__btn">
+                    <a href="#about__content">
+                        <i className="fas fa-angle-double-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="particles-js"></div>
+        </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <section className="Section">
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+    
+    <div className="about__content" id="about__content">
+        <div className="about__title">
+            <h3>About me</h3>
+            <span>Main informations about me</span>
+        </div>
+        <div className="info__about__me">
+            <div className="info_photo">
+            <Image className="info_photo_item" src="/images/006.png" width={100} height={100}alt="MyPhoto" /> 
+            </div>
+            <div className="text__about__me">
+                <div className="subTitle__aboutMe">
+                    <h6>I'm Bhuvanesh and I'm <span className="about_typing"></span></h6> 
+                </div>
+                <div className="paragraph__aboutMe">
+                    <p>Hi! My name is <span>Bhuvanesh</span>. I am a Web Developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply.</p>
+                </div>
+                <div className="more_info_aboutMe">
+                    <ul>
+                        <li>
+                            <label>Birthday:</label>
+                            <p>13.09.1989</p> 
+                        </li>
+                        <li>
+                            <label>City:</label>
+                            <p>Tamilnadu, India</p> 
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <label>Mail:</label>
+                            <a href="#">bhuvanmca88@gmail.com</a> 
+                        </li>
+                        <li>
+                            <label>Phone:</label>
+                            <a href="#">+91 999 455 4593</a> 
+                        </li>
+                    </ul>
+                </div>
+                <div className="link_social_aboutMe">
+                    <a title="facebook" href="#"><i className="fab fa-facebook-f"></i></a>
+                    <a title="twitter" href="#"><i className="fab fa-twitter"></i></a>
+                    <a title="linkedin" href="#"><i className="fab fa-linkedin-in"></i></a>
+                    <a title="instagram" href="#"><i className="fab fa-instagram"></i></a>
+                    <a title="dribbble" href="#"><i className="fab fa-dribbble"></i></a>
+                </div>
+                <div className="btn__aboutMe">
+                    <a download href="text.html"><span>Download CV</span></a>
+                    <a href="#contact"><span>Send Message</span></a>
+                </div>
+            </div>
+        </div>
+        <div className="myStoryAboutMe">
+            <div className="myStory">
+                <h5>My Story</h5> 
+                <p>Hi! My name is Bhuvanesh. I am a Web Developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry. </p>
+            </div>
+            <div className="mySkills" id="mySkills">
+                <h5>My Skills</h5> 
+                <div className="skill-title">
+                    <label>HTML/CSS</label>
+                    <label data-num="90" className="skill-bar-percent">0</label>
+                    <label>%</label>
+                </div>
+                <div className="skillbar" data-percent="90%">
+                    <div className="skill-bar one"></div>
+                </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                <div className="skill-title">
+                    <label>PHP</label>
+                    <label data-num="95" className="skill-bar-percent">0</label>
+                    <label>%</label>
+                </div>
+                <div className="skillbar" data-percent="95%">
+                    <div className="skill-bar two"></div>
+                </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+                <div className="skill-title">
+                    <label>JAVASCRIPT</label>
+                    <label data-num="85" className="skill-bar-percent">0</label>
+                    <label>%</label>
+                </div>
+                <div className="skillbar" data-percent="85%">
+                    <div className="skill-bar three"></div>
+                </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+                <div className="skill-title">
+                    <label>MOBILE APP DEVELOPMENT</label>
+                    <label data-num="75" className="skill-bar-percent">0</label>
+                    <label>%</label>
+                </div>
+                <div className="skillbar" data-percent="75%">
+                    <div className="skill-bar four"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div className="services__content">
+        <div className="about__title" id="services">
+            <h3>Services</h3>
+            <span>What i do</span>
+        </div>
+        <div className="services_items">
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="fas fa-bars"></i>
+                    </div>
+                    <span>UX</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="fas fa-vector-square"></i>
+                    </div>
+                    <span>DESIGN</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="fas fa-code"></i>
+                    </div>
+                    <span>CODING</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="far fa-comment-dots"></i>
+                    </div>
+                    <span>SOCIAL</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="fas fa-search"></i>
+                    </div>
+                    <span>SEO</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+            <div className="service_iner">
+                <div className="service-title">
+                    <div className="service_icon">
+                        <i className="fas fa-chart-pie"></i>
+                    </div>
+                    <span>COMMERCE</span>
+                </div>
+                <div className="service-subTitle">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has Ipsum has been the. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div className="counter__content">
+        <div className="counter" id="counter">
+            <div className="bl">
+                <div>
+                    <i className="fas fa-users"></i>
+                    <h4 data-num="650">0</h4>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+            <div className="bl">
+                <div>
+                    <i className="fas fa-thumbs-up"></i>
+                    <h4 data-num="635">0</h4>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+            <div className="bl">
+                <div>
+                    <i className="fas fa-terminal"></i>
+                    <h4 data-num="1250">0</h4>
+                    <p>Lines Of Code</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+   
+    <div className="works__content">
+        <div className="about__title" id="portfolio">
+            <h3>Portfolio</h3>
+            <span>Work i have done</span>
+        </div>
+        <div className="work_nav">
+            <ul>
+                <li className="active btn_work " data-filter="all">all</li>
+                <li className="btn_work" data-filter="webDesign">Web design</li>
+                <li className="btn_work" data-filter="application">Application</li>
+                <li className="btn_work" data-filter="development">Development</li>
+            </ul>
+        </div>
+        <div className="works__inner">
+            <div className="work_item filter application">
+                <div className="item_content">
+                <Image src="/images/work/001.jpg" alt="work" width={100} height={100}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Application</h6>
+                        <a  href="images/work/001.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div className="work_item filter webDesign">
+                <div className="item_content">
+                <Image src="/images/work/002.jpg" alt="work" fill={true}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Web design</h6>
+                        <a href="images/work/002.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div className="work_item filter development">
+                <div className="item_content">
+                <Image src="/images/work/003.jpg" alt="work" fill={true}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Application</h6>
+                        <a href="images/work/003.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                    </div>
+            </div>
+            <div className="work_item filter webDesign development">
+                <div className="item_content">
+                <Image src="/images/work/004.jpg" alt="work" width={100} height={100}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Development</h6>
+                        <a href="images/work/004.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div className="work_item filter application development">
+                <div className="item_content">
+                <Image src="/images/work/005.jpg" alt="work" width={100} height={100}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Web design</h6>
+                        <a href="images/work/005.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div className="work_item filter application development">
+                <div className="item_content">
+                <Image src="/images/work/006.jpg" alt="work" width={100} height={100}/>
+                    <div className="item-overlay"></div>
+                    <div className="item_title">
+                        <h6>Web design</h6>
+                        <a href="images/work/006.jpg"><i className="fas fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <div className="feedback_content">
+        <div className="feedback_container">
+            <div className="owl-carousel owl-theme" id="owl-carousel">
+                <div>
+                    <figure>
+                    <Image src="/images/face.jpg" alt="user" fill={true}/>
+                        <div className="name">Mary Brown</div>
+                        <div className="comment">Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</div> 
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                    <Image src="/images/face.jpg" alt="user" fill={true}/>
+                        <div className="name">Mary Brown</div>
+                        <div className="comment">Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</div>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                    <Image src="/images/face.jpg" alt="user" fill={true}/>
+                        <div className="name">Mary Brown</div>
+                        <div className="comment">Dolor facilis veritatis doloremque dicta eos Voluptate earum nulla ad et esse Saepe asperiores nisi facere ipsam corporis. Dolorem praesentium tenetur tempore dolorem illum autem? Veritatis fuga quasi sunt tenetur. Expedita id eaque incidunt beatae nesciunt! In similique exercitationem tempore excepturi placeat Nostrum ducimus dicta temporibus quas!</div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div className="contact_content">
+        <div className="about__title" id="contact">
+            <h3>Contact</h3>
+            <span>Get in touch</span>
+        </div>
+        <div className="contact-title">
+            <span>Leave a message</span>
+        </div>
+        <div className="contact__conte">
+            <div className="info-contact">
+                <p>Tamilnadu, India</p> 
+                <a href="#">bhuvanmca88@gmail.com</a> 
+                <a href="#">+91 999 455 4593</a> 
+                <div className="contact-social">
+                    <a title="facebook" href="#"><i className="fab fa-facebook-f"></i></a>
+                    <a title="linkedin" href="#"><i className="fab fa-linkedin-in"></i></a>
+                    <a title="instagram" href="#"><i className="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div className="footer">
+        <p>&copy; 2019 All Rights Reserved</p>
+    </div>
+   
+
+    </section>
+</div>
+   
     </main>
   );
 }
