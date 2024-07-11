@@ -66,7 +66,13 @@ export default function Home() {
                     <h6>I am Bhuvanesh and I am <span className="about_typing"></span></h6> 
                 </div>
                 <div className="paragraph__aboutMe">
-                    <p>Hi! My name is <span>Bhuvanesh</span>. I am a Web Developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply.</p>
+                    <p>Hi! My name is <span>Bhuvanesh</span>. 
+                         I am a Web Developer, Lorem Ipsum is simply dummy text of the printing 
+                         and typesetting industry. Lorem Ipsum has been the industry 
+                         standard dummy text ever since. Lorem Ipsum has been the industry.
+                         Lorem Ipsum has been the industry standard dummy text since. 
+                         Lorem Ipsum is simply. Lorem Ipsum has been the industry
+                         standard dummy text since. Lorem Ipsum is simply.</p>
                 </div>
                 <div className="more_info_aboutMe">
                     <ul>
@@ -106,7 +112,12 @@ export default function Home() {
         <div className="myStoryAboutMe">
             <div className="myStory">
                 <h5>My Story</h5> 
-                <p>Hi! My name is Bhuvanesh. I am a Web Developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry. </p>
+                <p>Hi! My name is Bhuvanesh. 
+                     I am a Web Developer,
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry standard dummy text ever since.
+                     Lorem Ipsum has been the industry. 
+                     Lorem Ipsum has been the industry. Lorem Ipsum has been the industry. </p>
             </div>
             <div className="mySkills" id="mySkills">
                 <h5>My Skills</h5> 
