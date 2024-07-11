@@ -1,6 +1,5 @@
 import React, {useRef} from 'react';
 import Image from "next/image";
-import Typed from 'typed.js';
 
 export default function Home() {
      
