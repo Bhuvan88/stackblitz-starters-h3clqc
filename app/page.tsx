@@ -38,7 +38,7 @@ export default function Home() {
             <div className="header__content" id="header__content">
                 <div className="header__title">
                     <h1>Bhuvanesh</h1>
-                    <h2>Hello I'm <span className="typing"></span></h2>
+                    <h2>Hello I am <span className="typing"></span></h2>
                 </div>
                 <div className="Down__btn">
                     <a href="#about__content">
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
             <div className="text__about__me">
                 <div className="subTitle__aboutMe">
-                    <h6>I'm Bhuvanesh and I'm <span className="about_typing"></span></h6> 
+                    <h6>I am Bhuvanesh and I am <span className="about_typing"></span></h6> 
                 </div>
                 <div className="paragraph__aboutMe">
                     <p>Hi! My name is <span>Bhuvanesh</span>. I am a Web Developer, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. Lorem Ipsum has been the industry. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply. Lorem Ipsum has been the industry's standard dummy text since. Lorem Ipsum is simply.</p>
